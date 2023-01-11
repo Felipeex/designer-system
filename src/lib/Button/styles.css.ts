@@ -35,6 +35,7 @@ export const Container = styled("button", {
   color: "white",
   cursor: "pointer",
   borderRadius: "5px",
+  lineHeight: "130%",
 
   variants: {
     size,

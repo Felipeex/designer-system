@@ -19,23 +19,21 @@ function App() {
 ### Customizar CSS com stitches
 
 ```jsx
-<Box
+<Button
   css={'&:hover': {
     background: "red"
   }}
 >
     Criar conta
   </Button>
-</Box>
 ```
 
 ### Customizar CSS
 
 ```jsx
-<Box
+<Button
   style={background: "red"}
 >
     Criar conta
   </Button>
-</Box>
 ```
