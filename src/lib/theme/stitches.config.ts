@@ -31,17 +31,16 @@ export const {
       "green-500": "#92FF6B",
     },
     fontSizes: {
+      "heading-large": "58px",
+      "heading-medium": "48px",
+      "heading-small": "38px",
+      "heading-ultra-small": "36px",
+
       "ultra-large": "1.625rem" /* 26px */,
       large: "1.375rem" /* 22px */,
       medium: "1.25rem" /* 20px */,
       small: "1.125rem" /* 18px */,
       "ultra-small": "1rem" /* 16px */,
-    },
-    headingSizes: {
-      large: "58px",
-      medium: "48px",
-      small: "38px",
-      "ultra-small": "36px",
     },
     fonts: {
       default: "Poppins",

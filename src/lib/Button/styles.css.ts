@@ -6,7 +6,7 @@ export const size = {
     padding: "$small",
   },
   medium: {
-    fontSize: "$small",
+    fontSize: "$ultra-small",
     padding: "$medium",
   },
   large: {
