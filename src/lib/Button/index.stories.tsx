@@ -5,7 +5,7 @@ export default {
   title: "Components/Button",
   component: Button,
   args: {
-    label: "Button",
+    children: "Button",
     size: "small",
     mode: "primary",
     disabled: false,
@@ -17,35 +17,35 @@ export default {
 
 export const Primary: StoryObj<buttonProps> = {
   args: {
-    label: "Button",
+    children: "Button",
     mode: "primary",
   },
 };
 
 export const Secondary: StoryObj<buttonProps> = {
   args: {
-    label: "Button",
+    children: "Button",
     mode: "secondary",
   },
 };
 
 export const Small: StoryObj<buttonProps> = {
   args: {
-    label: "Button",
+    children: "Button",
     size: "small",
   },
 };
 
 export const Medium: StoryObj<buttonProps> = {
   args: {
-    label: "Button",
+    children: "Button",
     size: "medium",
   },
 };
 
 export const Large: StoryObj<buttonProps> = {
   args: {
-    label: "Button",
+    children: "Button",
     size: "large",
   },
 };

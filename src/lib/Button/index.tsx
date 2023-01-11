@@ -1,22 +1,22 @@
 import { Container, mode, size } from "./styles.css";
 
 export interface buttonProps {
-  label: string;
+  children: React.ReactNode;
   mode: keyof typeof mode;
-  size: keyof typeof size;
-  backgroundColor: string;
-  disabled: boolean;
+  size?: keyof typeof size;
+  backgroundColor?: string;
+  disabled?: boolean;
 }
 
 export function Button({
-  label,
+  children,
   size = "small",
   backgroundColor,
   ...rest
 }: buttonProps) {
   return (
     <Container size={size} css={{ backgroundColor }} {...rest}>
-      {label}
+      {children}
     </Container>
   );
 }
