@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "lib": ["es2017", "dom"],
     "module": "commonjs",
     "outDir": "./dist",
     "strict": true,
@@ -9,7 +10,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@lib/*": ["lib/*"],
+    }
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "example", "rollup.config.js"]
+  "exclude": ["node_modules", "dist"]
 }

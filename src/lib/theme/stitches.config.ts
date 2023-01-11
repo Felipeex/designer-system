@@ -30,7 +30,7 @@ export const {
 
       "green-500": "#92FF6B",
     },
-    textSizes: {
+    fontSizes: {
       "ultra-large": "1.625rem" /* 26px */,
       large: "1.375rem" /* 22px */,
       medium: "1.25rem" /* 20px */,
@@ -47,9 +47,9 @@ export const {
       default: "Poppins",
     },
 
-    buttons: {
-      md: "16px 50px",
-      sm: "12px 38px",
+    space: {
+      medium: "16px 50px",
+      small: "12px 38px",
     },
   },
 });
