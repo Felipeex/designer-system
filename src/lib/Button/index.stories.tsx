@@ -12,6 +12,7 @@ export default {
   },
   argTypes: {
     backgroundColor: { control: "color" },
+    hoverColor: { control: "color" },
   },
 } as Meta<buttonProps>;
 

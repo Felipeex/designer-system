@@ -18,13 +18,13 @@ export const size = {
 export const mode = {
   primary: {
     backgroundColor: "$blue-700",
-    "&:hover": {
+    "&:hover:not([disabled])": {
       backgroundColor: "$blue-500",
     },
   },
   secondary: {
     backgroundColor: "$gray-700",
-    "&:hover": {
+    "&:hover:not([disabled])": {
       backgroundColor: "$gray-600",
     },
   },
