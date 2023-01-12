@@ -1,7 +1,8 @@
+import React from "react";
 import { CSS } from "@stitches/react";
 import { Container, mode, size } from "./styles.css";
 
-export interface buttonProps {
+export interface buttonProps extends React.ComponentProps<typeof Container> {
   children: React.ReactNode;
   mode: keyof typeof mode;
   size?: keyof typeof size;

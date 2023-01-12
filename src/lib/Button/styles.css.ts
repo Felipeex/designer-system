@@ -50,4 +50,9 @@ export const Container = styled("button", {
   border: 0,
   outline: "none",
   transition: "all 0.3s ease 0s",
+
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "8px",
 });
