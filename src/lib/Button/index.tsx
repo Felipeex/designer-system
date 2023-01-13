@@ -1,12 +1,9 @@
-import React, {
-  ComponentPropsWithRef,
-  forwardRef,
-  ForwardRefRenderFunction,
-} from "react";
+import React, { ComponentPropsWithRef, forwardRef } from "react";
 import { CSS } from "@stitches/react";
 import { Container, mode, size } from "./styles.css";
 
-export interface buttonProps extends ComponentPropsWithRef<typeof Container> {
+export interface buttonProps<T extends React.ElementType>
+  extends ComponentPropsWithRef<typeof Container> {
   children: React.ReactNode;
   mode: keyof typeof mode;
   size?: keyof typeof size;
@@ -17,9 +14,10 @@ export interface buttonProps extends ComponentPropsWithRef<typeof Container> {
   style?: React.CSSProperties;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   ref?: React.MutableRefObject<HTMLButtonElement>;
+  as?: T;
 }
 
-const button: ForwardRefRenderFunction<HTMLButtonElement, buttonProps> = (
+const button = <T extends React.ElementType = "a">(
   {
     children,
     size = "small",
@@ -28,8 +26,9 @@ const button: ForwardRefRenderFunction<HTMLButtonElement, buttonProps> = (
     css,
     style,
     ...rest
-  }: buttonProps,
-  ref
+  }: buttonProps<T> &
+    Omit<React.ComponentPropsWithoutRef<T>, keyof buttonProps<T>>,
+  ref: React.Ref<HTMLButtonElement>
 ) => {
   return (
     <Container

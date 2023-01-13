@@ -14,37 +14,37 @@ export default {
     backgroundColor: { control: "color" },
     hoverColor: { control: "color" },
   },
-} as Meta<buttonProps>;
+} as Meta<buttonProps<"button">>;
 
-export const Primary: StoryObj<buttonProps> = {
+export const Primary: StoryObj<buttonProps<"button">> = {
   args: {
     children: "Button",
     mode: "primary",
   },
 };
 
-export const Secondary: StoryObj<buttonProps> = {
+export const Secondary: StoryObj<buttonProps<"button">> = {
   args: {
     children: "Button",
     mode: "secondary",
   },
 };
 
-export const Small: StoryObj<buttonProps> = {
+export const Small: StoryObj<buttonProps<"button">> = {
   args: {
     children: "Button",
     size: "small",
   },
 };
 
-export const Medium: StoryObj<buttonProps> = {
+export const Medium: StoryObj<buttonProps<"button">> = {
   args: {
     children: "Button",
     size: "medium",
   },
 };
 
-export const Large: StoryObj<buttonProps> = {
+export const Large: StoryObj<buttonProps<"button">> = {
   args: {
     children: "Button",
     size: "large",
