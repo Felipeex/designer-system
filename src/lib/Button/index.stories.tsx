@@ -1,5 +1,6 @@
 import { Button, buttonProps } from "./index";
 import { Meta, StoryObj } from "@storybook/react";
+import { User } from "phosphor-react";
 
 export default {
   title: "Components/Button",
@@ -13,40 +14,53 @@ export default {
   argTypes: {
     backgroundColor: { control: "color" },
     hoverColor: { control: "color" },
+    onClick: { action: "click" },
   },
-} as Meta<buttonProps<"button">>;
+} as Meta<buttonProps>;
 
-export const Primary: StoryObj<buttonProps<"button">> = {
+export const Primary: StoryObj<buttonProps> = {
   args: {
-    children: "Button",
     mode: "primary",
   },
 };
 
-export const Secondary: StoryObj<buttonProps<"button">> = {
+export const Secondary: StoryObj<buttonProps> = {
   args: {
-    children: "Button",
     mode: "secondary",
   },
 };
 
-export const Small: StoryObj<buttonProps<"button">> = {
+export const Small: StoryObj<buttonProps> = {
   args: {
-    children: "Button",
     size: "small",
   },
 };
 
-export const Medium: StoryObj<buttonProps<"button">> = {
+export const Medium: StoryObj<buttonProps> = {
   args: {
-    children: "Button",
     size: "medium",
   },
 };
 
-export const Large: StoryObj<buttonProps<"button">> = {
+export const Large: StoryObj<buttonProps> = {
   args: {
-    children: "Button",
     size: "large",
+  },
+};
+
+export const withIcon: StoryObj<buttonProps> = {
+  args: {
+    children: (
+      <>
+        <User weight="bold" />
+        Fazer Login
+      </>
+    ),
+  },
+};
+
+export const Disabled: StoryObj<buttonProps> = {
+  args: {
+    disabled: true,
   },
 };

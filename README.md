@@ -25,7 +25,7 @@ function App() {
   }}
 >
     Criar conta
-  </Button>
+</Button>
 ```
 
 ### Customizar CSS
@@ -35,5 +35,5 @@ function App() {
   style={background: "red"}
 >
     Criar conta
-  </Button>
+</Button>
 ```
