@@ -14,7 +14,7 @@ export interface buttonProps extends ComponentPropsWithRef<"button"> {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   ref?: React.MutableRefObject<HTMLButtonElement>;
   asChild?: boolean;
-  css: CSS;
+  css?: CSS;
 }
 
 const button = (
