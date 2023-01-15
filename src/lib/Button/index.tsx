@@ -18,7 +18,6 @@ export interface buttonProps extends ComponentPropsWithRef<typeof Container> {
 
 const button = (
   {
-    children,
     size = "small",
     backgroundColor,
     hoverColor,
@@ -41,9 +40,7 @@ const button = (
       style={style}
       ref={ref}
       {...rest}
-    >
-      {children}
-    </Container>
+    />
   );
 };
 
