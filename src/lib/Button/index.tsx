@@ -1,50 +1,51 @@
-import React, { ComponentPropsWithRef, ElementType, forwardRef } from "react";
-import { CSS } from "@stitches/react";
+import React, { ComponentPropsWithRef, forwardRef } from "react";
 import { Container, mode, size } from "./styles.css";
+import { Slot } from "@radix-ui/react-slot";
+import { CSS } from "@stitches/react";
 
-export interface buttonProps extends ComponentPropsWithRef<typeof Container> {
+export interface buttonProps extends ComponentPropsWithRef<"button"> {
   children: React.ReactNode;
   mode: keyof typeof mode;
   size?: keyof typeof size;
   backgroundColor?: string;
   hoverColor?: string;
   disabled?: boolean;
-  css?: CSS;
   style?: React.CSSProperties;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   ref?: React.MutableRefObject<HTMLButtonElement>;
-  as?: ElementType;
+  asChild?: boolean;
+  css?: CSS;
 }
 
 const button = (
   {
-    children,
     size = "small",
     backgroundColor,
     hoverColor,
-    css,
     style,
+    asChild,
+    mode,
+    css: CSS,
     ...rest
   }: buttonProps,
   ref: React.Ref<HTMLButtonElement>
 ) => {
-  return (
-    <Container
-      size={size}
-      css={{
-        backgroundColor,
-        css,
-        "&:hover:not([disabled])": hoverColor && {
-          backgroundColor: hoverColor,
-        },
-      }}
-      style={style}
-      ref={ref}
-      {...rest}
-    >
-      {children}
-    </Container>
-  );
+  const css: CSS = {
+    backgroundColor,
+    "&:hover:not([disabled])": hoverColor && {
+      backgroundColor: hoverColor,
+    },
+    ...CSS,
+  };
+
+  const Component = asChild ? Slot : "button";
+  const styleClass = Container({
+    size,
+    css,
+    mode,
+  });
+
+  return <Component className={styleClass} style={style} ref={ref} {...rest} />;
 };
 
 export const Button = forwardRef(button);

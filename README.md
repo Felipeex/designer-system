@@ -20,9 +20,10 @@ function App() {
 
 ```jsx
 <Button
-  css={'&:hover': {
-    background: "red"
-  }}
+  ...
+  css={{
+    textDecoration: "none",
+  }},
 >
     Criar conta
 </Button>
@@ -32,8 +33,25 @@ function App() {
 
 ```jsx
 <Button
-  style={background: "red"}
+  ...
+  style={{background: "red"}}
 >
     Criar conta
+</Button>
+```
+
+### Usando asChild (Criando Link)
+
+```jsx
+<Button
+  ...
+  css={{
+    textDecoration: "none",
+  }},
+  asChild
+>
+  <a href="#">
+    Criar conta
+  </a>
 </Button>
 ```
