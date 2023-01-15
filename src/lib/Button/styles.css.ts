@@ -1,4 +1,4 @@
-import { styled } from "../theme";
+import { css } from "../theme";
 
 export const size = {
   small: {
@@ -30,7 +30,7 @@ export const mode = {
   },
 };
 
-export const Container = styled("button", {
+export const Container = css({
   fontWeight: 600,
   color: "white",
   cursor: "pointer",

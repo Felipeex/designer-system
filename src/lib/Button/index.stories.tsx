@@ -1,6 +1,6 @@
 import { Button, buttonProps } from "./index";
 import { Meta, StoryObj } from "@storybook/react";
-import { User } from "phosphor-react";
+import { Link, User } from "phosphor-react";
 
 export default {
   title: "Components/Button",
@@ -55,6 +55,21 @@ export const withIcon: StoryObj<buttonProps> = {
         <User weight="bold" />
         Fazer Login
       </>
+    ),
+  },
+};
+
+export const withLink: StoryObj<buttonProps> = {
+  args: {
+    asChild: true,
+    css: {
+      textDecoration: "none",
+    },
+    children: (
+      <a href="#">
+        <Link weight="bold" />
+        Ir para o Link
+      </a>
     ),
   },
 };
