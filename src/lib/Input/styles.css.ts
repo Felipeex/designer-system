@@ -19,8 +19,9 @@ export const Container = styled("div", {
 
   svg: {
     color: "$gray-600",
-    marginLeft: "14px",
   },
+
+  background: "$gray-900",
 });
 
 export const Input = styled("input", {
@@ -33,12 +34,33 @@ export const Input = styled("input", {
   outline: "none",
 
   "&:-webkit-autofill": {
-    "-webkit-box-shadow": "0 0 0 30px $gray-900 inset !important",
+    "-webkit-box-shadow": "0 0 0 30px #0E1015 inset !important",
     "-webkit-text-fill-color": "white !important",
   },
 
   "&::placeholder": {
     fontFamily: 500,
     color: "$gray-600",
+  },
+});
+
+export const position = {
+  left: {
+    marginLeft: 14,
+  },
+  right: {
+    marginRight: 14,
+  },
+};
+
+export const ContainerIcon = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  variants: {
+    position: {
+      ...position,
+    },
   },
 });
