@@ -25,6 +25,7 @@ export const Container = styled("div", {
 });
 
 export const Input = styled("input", {
+  width: "100%",
   border: 0,
   padding: "14px 14px 14px 0",
   flex: 1,
